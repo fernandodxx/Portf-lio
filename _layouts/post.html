@@ -40,6 +40,12 @@ layout: default
     {{ content }}
   </div>
 
+  <div class="post-comments">
+    {%- if site.disqus.shortname -%}
+      {%- include disqus_comments.html -%}
+    {%- endif -%}
+  </div>
+
   <footer class="post-footer">
     <!-- Categories -->
     {% if page.categories.size > 0 %}

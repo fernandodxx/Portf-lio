@@ -31,6 +31,9 @@ github_username:  jekyll
 
 number_of_posts: 5
 
+#disqus comments
+disqus:
+  shortname: shortname
 
 # Build settings
 theme: minima
@@ -75,6 +78,5 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
-  syntax_highlighter_opts: 
+  syntax_highlighter_opts:
     block_code_line_numbers: true
-
