@@ -1,0 +1,91 @@
+$Background: #282a36;
+$Current-Line: #44475a;
+$Foreground: #f8f8f2;
+$Comment: #6272a4;
+$Cyan: #8be9fd;
+$Green: #50fa7b;
+$Orange: #ffb86c;
+$Pink: #ff79c6;
+$Purple: #bd93f9;
+$Red: #ff5555;
+$Yellow: #f1fa8c;
+$base-font-size: 16px;
+
+// Container principal para centralização
+.home-container {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 20px;
+
+  @media (max-width: 768px) {
+    // Tablets
+    max-width: 95%; // Use uma porcentagem para ocupar mais espaço
+    padding: 10px;
+  }
+
+  @media (max-width: 480px) {
+    // Celulares
+    max-width: 100%;
+    padding: 5px;
+  }
+}
+
+// Título da seção
+.posts-item-note {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: $Green;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+// Lista de posts
+.post-item {
+  display: flex;
+  flex-wrap: wrap; // Permite que os elementos quebrem linha em telas menores
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  &:not(:first-child) {
+    border-top: 2px solid #282a36; // Linha entre os itens
+  }
+
+  .post-item-date {
+    min-width: 96px;
+    color: $Green;
+    font-weight: 700;
+    padding-right: 10px;
+    text-align: right; // Alinha a data à direita
+
+    @media (max-width: 768px) {
+      min-width: auto; // Permite que o tamanho da data seja ajustado automaticamente
+      width: 500%; // Ocupa toda a largura disponível
+      padding-right: 0; // Remove o padding extra
+    }
+  }
+
+  .post-item-title {
+    margin: 0;
+    padding: 0;
+    font-size: $base-font-size;
+    font-weight: normal;
+    letter-spacing: 0.1px;
+
+    a {
+      color: #F2F2F2;
+      text-decoration: none; // Remove sublinhado padrão
+
+      &:hover,
+      &:focus {
+        color: #8be9fd; // Destaca o link ao passar o mouse
+        text-decoration: underline; // Adiciona um sublinhado ao hover
+      }
+    }
+
+    @media (max-width: 768px) {
+      width: 50%; // Ocupa toda a largura disponível
+    }
+  }
+}

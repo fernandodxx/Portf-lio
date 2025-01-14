@@ -1,0 +1,101 @@
+$post-bg: #4b79a19f;
+$post-text: #f8f8f2;
+$post-accent: #000000;
+$post-heading: #50fa7b;
+$post-meta: #bd93f9;
+$post-border: #44475a;
+
+.post-container {
+  color: $post-text;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 800px;
+
+  a {
+    color: #50fa7b;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      color: #8be9fd;
+    }
+  }
+}
+
+.post-header {
+  margin-bottom: 20px;
+
+  .post-title {
+    color: $post-heading;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .post-description {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: $post-meta;
+  }
+
+  .post-meta {
+    font-size: 0.9rem;
+    color: $post-meta;
+
+    span {
+      display: block;
+    }
+  }
+}
+
+.post-image {
+  margin: 20px 0;
+
+  img {
+    max-width: 100%;
+    border-radius: 8px;
+    height: auto;
+  }
+
+  figcaption {
+    font-size: 0.9rem;
+    color: $post-meta;
+    text-align: center;
+    margin-top: 5px;
+  }
+}
+
+img.light {
+  display: block;
+  /* Garante que ocupe a linha toda */
+  margin: 20px auto;
+  /* Centraliza a imagem horizontalmente */
+  max-width: 100%;
+  /* Limita a largura da imagem a 50% da tela */
+  height: auto;
+  /* Mantém a proporção */
+  object-fit: contain;
+  /* Ajusta o conteúdo da imagem */
+}
+
+.post-content {
+  line-height: 1.8;
+}
+
+.post-footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+
+  .post-categories,
+  .post-tags {
+    margin-bottom: 10px;
+
+    a {
+      color: #8be9fd;
+
+      &:hover {
+        color: $post-heading;
+      }
+    }
+  }
+}

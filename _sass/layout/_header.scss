@@ -1,0 +1,50 @@
+.header-page {
+  background-color: #282a36;
+  width: 100vw;
+  /* Garante que o header ocupe toda a largura */
+  overflow-x: hidden;
+  /* Evita rolagem lateral */
+
+  .container {
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    /* Largura máxima opcional */
+    width: 100%;
+    /* Ocupa 100% da largura disponível */
+    margin: 0 auto;
+    /* Centraliza o conteúdo */
+  }
+
+  h1 {
+    font-size: 1.8rem;
+
+    a {
+      color: #50fa7b;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        color: #8be9fd;
+      }
+    }
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+  }
+
+  nav ul li a {
+    color: #F2F2F2;
+    text-decoration: none;
+
+    &:hover {
+      color: #ff79c6;
+    }
+  }
+}

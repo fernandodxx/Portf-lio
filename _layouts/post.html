@@ -1,0 +1,70 @@
+---
+layout: default
+---
+<head>
+    {% include header.html %}
+</head>
+<article class="post-container">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+
+    {% if page.description %}
+    <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+
+    <div class="post-meta">
+      <!-- Published Date -->
+      <span class="post-date">
+        Posted on {{ page.date | date: "%B %d, %Y" }}
+      </span>
+
+      <!-- Last Modified -->
+      {% if page.last_modified_at and page.last_modified_at != page.date %}
+      <span class="post-updated">
+        Updated on {{ page.last_modified_at | date: "%B %d, %Y" }}
+      </span>
+      {% endif %}
+    </div>
+  </header>
+
+  {% if page.image %}
+  <figure class="post-image">
+    <img src="{{ page.image }}" alt="{{ page.image_alt | default: 'Post Image' }}">
+    {% if page.image_alt %}
+    <figcaption>{{ page.image_alt }}</figcaption>
+    {% endif %}
+  </figure>
+  {% endif %}
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    <!-- Categories -->
+    {% if page.categories.size > 0 %}
+    <div class="post-categories">
+      Categories:
+      {% for category in page.categories %}
+      <a href="{{ '/categories/' | append: category | slugify | relative_url }}">
+        {{ category }}
+      </a>
+      {%- unless forloop.last -%}, {%- endunless -%}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Tags -->
+    {% if page.tags.size > 0 %}
+    <div class="post-tags">
+      Tags:
+      {% for tag in page.tags %}
+      <a href="{{ '/tags/' | append: tag | slugify | relative_url }}">
+        {{ tag }}
+      </a>
+      {%- unless forloop.last -%}, {%- endunless -%}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </footer>
+</article>
