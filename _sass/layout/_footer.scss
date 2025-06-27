@@ -1,9 +1,10 @@
 .rodape {
-  background-color: #282a36;
-  color: white;
-  width: 100%; // O footer ocupa toda a largura
+  background: var(--hd-ft-bg);
+  color: var(--text);
+  width: 100rm;
   font-size: 14px;
   font-family: helvetica;
+  font-weight: bold;
   padding: 20px;
 }
 

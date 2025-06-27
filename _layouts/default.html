@@ -1,50 +1,20 @@
+<head>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/syntax-dracula.css' | relative_url }}">
+  
+</head>
 
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.querySelectorAll("pre > code").forEach((codeBlock) => {
-        const button = document.createElement("button");
-        button.innerText = "Copiar";
-        button.className = "copy-button";
-        button.style = `
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: #44475a;
-        color: white;
-        border: none;
-        padding: 5px 10px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 12px;
-      `;
-        const pre = codeBlock.parentElement;
-        pre.style.position = "relative";
-        pre.appendChild(button);
-  
-        button.addEventListener("click", () => {
-          navigator.clipboard.writeText(codeBlock.innerText).then(
-            () => {
-              button.innerText = "Copiado!";
-              setTimeout(() => (button.innerText = "Copiar"), 2000);
-            },
-            (err) => {
-              console.error("Erro ao copiar: ", err);
-            }
-          );
-        });
-      });
-    });
-  </script>
-  <head>
-    {% include header.html %}
-  </head>
-  <body>
-    <main id="main-content">
-      {{ content }}
-    </main>
-    <footer>
-      {% include footer.html %}
-    </footer>
-  
-  </body>
+<body>
+  {% include header.html %}
+  <main id="main-content">
+    {{ content }}
+  </main>
+
+  <footer>
+    {% include footer.html %}
+  </footer>
+
+  <script src="{{ '/assets/js/copy-code.js' | relative_url }}"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="{{ '/assets/js/portfolio-animations.js' | relative_url }}"></script>
+</body>

@@ -3,9 +3,8 @@ layout: post
 title: "Sistema de Reservas de Voos com Ruby on Rails ✈️"
 date: 2024-01-08
 description: "Este é um post incrível sobre programação."
-categories: [Ruby, Rails]
-tags: [jekyll, layouts, css]
 ---
+![Light mode only](/assets/img/photo-1488085061387-422e29b40080.png){: .light }
 
 ## Introdução 
 Recentemente, desenvolvi um sistema de reservas de voos utilizando Ruby on Rails, onde os usuários podem pesquisar voos, selecionar o voo desejado e inserir suas informações pessoais para concluir a reserva. Este post tem como objetivo compartilhar os detalhes do desenvolvimento dessa aplicação.
@@ -34,7 +33,7 @@ end
 ### 2. Escolha do Voo
 Após a pesquisa, os voos disponíveis são apresentados ao usuário, que pode selecionar o voo desejado. O formulário de seleção inclui os detalhes do voo, como horário de partida, chegada e duração.
 
-```ERB
+```ruby
 <%= form_with url: new_booking_path, method: :get, local: true do %>
   <table>
     <thead>
@@ -91,7 +90,7 @@ end
 
 ### 4. Exibição da Reserva
 Após o envio do formulário, a página de confirmação exibe as informações do voo e dos passageiros. O sistema associa automaticamente os passageiros à reserva e ao voo escolhido.
-```ERB
+```ruby
 <h1>Reserva Confirmada</h1>
 <p><strong>Aeroporto de Partida:</strong> <%= @booking.flight.departure_airport.code %></p>
 <p><strong>Aeroporto de Chegada:</strong> <%= @booking.flight.arrival_airport.code %></p>
@@ -108,6 +107,7 @@ Após o envio do formulário, a página de confirmação exibe as informações 
   <% end %>
 </ul>
 ```
+
 ## Tecnologias Utilizadas
 * **Ruby on Rails:** Utilizado para construir o backend da aplicação, com ActiveRecord para gerenciar as associações entre voos, reservas e passageiros.
 * **HTML e ERB:** Para construir as páginas de visualização com os formulários e exibir os dados.

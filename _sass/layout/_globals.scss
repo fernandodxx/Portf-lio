@@ -1,17 +1,21 @@
 body {
+  background: var(--bg-primary);
   margin: 0;
   padding: 0; 
   overflow-x: hidden;
-  background: #1a1a1a;
-  color: #F2F2F2;
-  height: 100%; // Garante que a altura da página seja 100%
-  width: 100%;
-  display: flex;
-  flex-direction: column; // Organiza o layout em uma coluna
+  color: var(--text);
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 }
 
-#main-content {
-  flex: 1; // Faz com que o conteúdo principal ocupe o espaço disponível
+
+main#main-content {
+  flex: 1;
+  background-color: var(--bg-primary); /* Garante que o fundo primário seja aplicado aqui */
+  color: var(--text-primary); /* Cor de texto padrão */
+  min-height: 100vh; /* Opcional: Garante que o main ocupe pelo menos a altura da tela */
+  display: flex; /* Para flexibilidade na organização de seções */
+  flex-direction: column;
+  box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura */
 }
 
 h1,
@@ -25,6 +29,6 @@ a {
   transition: color 0.2s;
 
   &:hover {
-    color: #1203df;
+    color: var(--accent-hover);
   }
 }

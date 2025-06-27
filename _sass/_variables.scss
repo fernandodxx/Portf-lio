@@ -1,0 +1,55 @@
+:root {
+  /* Cores básicas */
+  --background-page: #f8f8f8;
+  --background-card: #ffffff;
+  --text-post: #333333;
+  --text: #555555;
+  --text-light: #777777;
+  --text-content: #36454F; /* Uma cor mais escura e confortável para o corpo do texto */
+  --heading-color: #2c3e50; /* Cor para títulos */
+  --accent: #3498db; /* Azul primário */
+  --accent-hover: #2980b9; /* Azul mais escuro no hover */
+  --border-color: #eeeeee; /* Cor de borda sutil */
+
+  /* Cores para código */
+  --code-background: #282a36; 
+  --code-text: #f8f8f2;
+  --inline-code-background: #44475a;
+  --inline-code-text: #f8f8f2; /* Um vermelho mais discreto para inline */
+
+  /* Cores para tags */
+  --tag-background: #ecf0f1;
+  --tag-text: #2c3e50;
+  --tag-hover-background: #bdc3c7;
+  --tag-hover-text: #ffffff;
+
+  /* Sombras */
+  --shadow-elevation-low: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  --shadow-elevation-medium: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+/* Exemplo para Dark Mode (opcional) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-page: #282c34;
+    --background-card: #3a404c;
+    --text-post: #e0e0e0;
+    --text: #cccccc;
+    --text-light: #aaaaaa;
+    --text-content: #e0e0e0;
+    --heading-color: #e0e0e0;
+    --accent: #61afef;
+    --accent-hover: #528fc7;
+    --border-color: #555555;
+
+    --code-background: #1e1e1e;
+    --code-text: #d4d4d4;
+    --inline-code-background: #5a5a5a;
+    --inline-code-text: #ffe082;
+
+    --tag-background: #4a4a4a;
+    --tag-text: #e0e0e0;
+    --tag-hover-background: #6a6a6a;
+    --tag-hover-text: #ffffff;
+  }
+}

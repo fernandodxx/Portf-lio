@@ -1,91 +1,96 @@
-$Background: #282a36;
-$Current-Line: #44475a;
-$Foreground: #f8f8f2;
-$Comment: #6272a4;
-$Cyan: #8be9fd;
-$Green: #50fa7b;
-$Orange: #ffb86c;
-$Pink: #ff79c6;
-$Purple: #bd93f9;
-$Red: #ff5555;
-$Yellow: #f1fa8c;
-$base-font-size: 16px;
+// Importar as variáveis do Dracula (se não estiverem no seu style.scss principal)
+// @import "variables"; 
 
-// Container principal para centralização
+// Container principal para centralização e tema Dracula
 .home-container {
-  max-width: 750px;
+  max-width: 800px; // Um pouco mais estreito para focar no conteúdo
   margin: 0 auto;
-  padding: 20px;
-
-  @media (max-width: 768px) {
-    // Tablets
-    max-width: 95%; // Use uma porcentagem para ocupar mais espaço
-    padding: 10px;
+  padding: 30px 20px; // Um bom padding geral
+  
+  @media (max-width: 768px) { // Tablets
+    max-width: 95%;
+    padding: 20px 15px; // Reduz o padding para telas menores
   }
 
-  @media (max-width: 480px) {
-    // Celulares
+  @media (max-width: 480px) { // Celulares
     max-width: 100%;
-    padding: 5px;
+    padding: 15px 10px;
+    border-radius: 0; // Remove border-radius em telas muito pequenas para ocupar a largura total
+    box-shadow: none; // Remove sombra em telas pequenas para um visual mais clean
   }
 }
 
-// Título da seção
-.posts-item-note {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+// Título da seção de posts
+.posts-section-title {
+  font-size: 1.8rem; // Um pouco menor que o hero, mas ainda destacado
+  margin-bottom: 25px; // Espaço abaixo do título da seção
   font-weight: 700;
-  color: $Green;
+  color: var(--heading-color); // Cor de título do Dracula
+  text-align: center; // Centraliza o título da seção
+
   @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 1.4rem;
+    margin-bottom: 18px;
   }
 }
 
-// Lista de posts
+// Item de post individual (Lista simples)
 .post-item {
-  display: flex;
+  display: flex; // Mantém a data e o título lado a lado
   flex-wrap: wrap; // Permite que os elementos quebrem linha em telas menores
-  padding-top: 10px;
+  align-items: baseline; // Alinha a base do texto
+  padding-top: 15px;
   padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color); // Linha entre os itens usando cor do Dracula
 
-  &:not(:first-child) {
-    border-top: 2px solid #282a36; // Linha entre os itens
+  &:last-child {
+    border-bottom: none; // Remove a borda do último item
   }
 
   .post-item-date {
-    min-width: 96px;
-    color: $Green;
+    min-width: 120px; // Aumentei um pouco para garantir espaço para a data
+    color: var(--accent); // Cor de destaque do Dracula
     font-weight: 700;
-    padding-right: 10px;
+    padding-right: 20px; // Mais espaço à direita
     text-align: right; // Alinha a data à direita
+    flex-shrink: 0; // Impede que a data diminua
+    white-space: nowrap; // Impede que a data quebre em várias linhas
 
     @media (max-width: 768px) {
-      min-width: auto; // Permite que o tamanho da data seja ajustado automaticamente
-      width: 500%; // Ocupa toda a largura disponível
-      padding-right: 0; // Remove o padding extra
+      min-width: 90px; // Ajusta para telas menores
+      padding-right: 10px;
+      text-align: left; // Muda a data para a esquerda em telas menores
+      width: auto; // Volta ao automático
+      margin-bottom: 5px; // Adiciona um pequeno espaçamento abaixo da data
+    }
+    @media (max-width: 480px) {
+      width: 100%; // Ocupa toda a largura em celulares para a data
     }
   }
 
   .post-item-title {
     margin: 0;
     padding: 0;
-    font-size: $base-font-size;
+    font-size: 1.3rem; // Tamanho do título do post na lista
     font-weight: normal;
-    letter-spacing: 0.1px;
+    letter-spacing: 0.2px; // Pequeno ajuste no espaçamento
+    flex-grow: 1; // Permite que o título ocupe o espaço restante
 
     a {
-      color: #F2F2F2;
+      color: var(--text-post); // Cor do texto do post
       text-decoration: none; // Remove sublinhado padrão
+      transition: color 0.3s ease, text-decoration 0.3s ease; // Transição suave
 
       &:hover,
       &:focus {
-        color: #8be9fd; // Destaca o link ao passar o mouse
+        color: var(--accent); // Destaca o link ao passar o mouse com a cor do Dracula
         text-decoration: underline; // Adiciona um sublinhado ao hover
       }
     }
 
     @media (max-width: 768px) {
-      width: 50%; // Ocupa toda a largura disponível
+      font-size: 1.15rem; // Ajusta para telas menores
+      flex-basis: 100%; // Ocupa toda a largura em telas menores, abaixo da data
     }
   }
 }

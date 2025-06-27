@@ -1,0 +1,93 @@
+/* Dracula Theme for Rouge */
+
+pre.highlight {
+  background-color: #282a36; /* Dracula background */
+  color: #f8f8f2; /* Dracula foreground */
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+pre.highlight .hll { background-color: #44475a } /* Selection background */
+pre.highlight .c { color: #6272a4; font-style: italic } /* Comment */
+pre.highlight .err { color: #f8f8f2; background-color: #ff5555 } /* Error */
+pre.highlight .k { color: #ff79c6 } /* Keyword */
+pre.highlight .l { color: #bd93f9 } /* Literal (numbers, booleans) */
+pre.highlight .n { color: #f8f8f2 } /* Name (variables, functions) */
+pre.highlight .o { color: #ff79c6 } /* Operator */
+pre.highlight .p { color: #f8f8f2 } /* Punctuation */
+pre.highlight .ch { color: #6272a4; font-style: italic } /* Comment.hashbang */
+pre.highlight .cm { color: #6272a4; font-style: italic } /* Comment.multiline */
+pre.highlight .cp { color: #6272a4 } /* Comment.preproc */
+pre.highlight .cpf { color: #6272a4; font-style: italic } /* Comment.preprocfile */
+pre.highlight .c1 { color: #6272a4; font-style: italic } /* Comment.single */
+pre.highlight .cs { color: #6272a4; font-style: italic } /* Comment.special */
+pre.highlight .gd { color: #ff5555 } /* Generic.deleted */
+pre.highlight .ge { font-style: italic } /* Generic.emphasized */
+pre.highlight .gr { color: #ff5555 } /* Generic.error */
+pre.highlight .gh { color: #f8f8f2 } /* Generic.heading */
+pre.highlight .gi { color: #50fa7b } /* Generic.inserted */
+pre.highlight .go { color: #44475a } /* Generic.output */
+pre.highlight .gp { color: #6272a4 } /* Generic.prompt */
+pre.highlight .gs { font-weight: bold } /* Generic.strong */
+pre.highlight .gu { color: #f8f8f2 } /* Generic.subheading */
+pre.highlight .gt { color: #ff5555 } /* Generic.traceback */
+pre.highlight .kc { color: #ff79c6 } /* Keyword.constant */
+pre.highlight .kd { color: #ff79c6 } /* Keyword.declartion */
+pre.highlight .kn { color: #ff79c6 } /* Keyword.namespace */
+pre.highlight .kp { color: #ff79c6 } /* Keyword.pseudo */
+pre.highlight .kr { color: #ff79c6 } /* Keyword.reserved */
+pre.highlight .kt { color: #8be9fd } /* Keyword.type */
+pre.highlight .ld { color: #f1fa8c } /* Literal.date */
+pre.highlight .mf { color: #bd93f9 } /* Literal.number.float */
+pre.highlight .mh { color: #bd93f9 } /* Literal.number.hex */
+pre.highlight .mi { color: #bd93f9 } /* Literal.number.integer */
+pre.highlight .mo { color: #bd93f9 } /* Literal.number.oct */
+pre.highlight .sb { color: #f1fa8c } /* String.backtick */
+pre.highlight .sc { color: #f1fa8c } /* String.char */
+pre.highlight .sd { color: #f1fa8c } /* String.doc */
+pre.highlight .s2 { color: #f1fa8c } /* String.double */
+pre.highlight .se { color: #bd93f9 } /* String.escape */
+pre.highlight .sh { color: #f1fa8c } /* String.heredoc */
+pre.highlight .si { color: #f1fa8c } /* String.interpol */
+pre.highlight .sx { color: #f1fa8c } /* String.other */
+pre.highlight .sr { color: #f1fa8c } /* String.regex */
+pre.highlight .s1 { color: #f1fa8c } /* String.single */
+pre.highlight .ss { color: #f1fa8c } /* String.symbol */
+pre.highlight .nc { color: #8be9fd } /* Name.class */
+pre.highlight .no { color: #ff79c6 } /* Name.constant */
+pre.highlight .nd { color: #8be9fd } /* Name.decorator */
+pre.highlight .ni { color: #f8f8f2 } /* Name.entity */
+pre.highlight .ne { color: #ff5555 } /* Name.exception */
+pre.highlight .nf { color: #50fa7b } /* Name.function */
+pre.highlight .nl { color: #8be9fd } /* Name.label */
+pre.highlight .nn { color: #8be9fd } /* Name.namespace */
+pre.highlight .nx { color: #f8f8f2 } /* Name.other */
+pre.highlight .py { color: #f8f8f2 } /* Name.property */
+pre.highlight .nt { color: #ff79c6 } /* Name.tag */
+pre.highlight .nv { color: #8be9fd } /* Name.variable */
+pre.highlight .ow { color: #ff79c6 } /* Operator.word */
+pre.highlight .w { color: #f8f8f2 } /* Text.whitespace */
+pre.highlight .mb { color: #bd93f9 } /* Literal.number.binary */
+pre.highlight .mf { color: #bd93f9 } /* Literal.number.float */
+pre.highlight .mh { color: #bd93f9 } /* Literal.number.hex */
+pre.highlight .mi { color: #bd93f9 } /* Literal.number.integer */
+pre.highlight .mo { color: #bd93f9 } /* Literal.number.oct */
+pre.highlight .sa { color: #f1fa8c } /* String.affix */
+pre.highlight .sb { color: #f1fa8c } /* String.backtick */
+pre.highlight .sc { color: #f1fa8c } /* String.char */
+pre.highlight .sd { color: #f1fa8c } /* String.doc */
+pre.highlight .s2 { color: #f1fa8c } /* String.double */
+pre.highlight .se { color: #bd93f9 } /* String.escape */
+pre.highlight .sh { color: #f1fa8c } /* String.heredoc */
+pre.highlight .si { color: #f1fa8c } /* String.interpol */
+pre.highlight .sx { color: #f1fa8c } /* String.other */
+pre.highlight .sr { color: #f1fa8c } /* String.regex */
+pre.highlight .s1 { color: #f1fa8c } /* String.single */
+pre.highlight .ss { color: #f1fa8c } /* String.symbol */
+pre.highlight .vc { color: #8be9fd } /* Name.variable.class */
+pre.highlight .vg { color: #8be9fd } /* Name.variable.global */
+pre.highlight .vi { color: #8be9fd } /* Name.variable.instance */
+pre.highlight .vm { color: #8be9fd } /* Name.variable.magic */
+pre.highlight .il { color: #bd93f9 } /* Literal.number.integer.long */
+

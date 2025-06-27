@@ -1,50 +1,71 @@
-.header-page {
-  background-color: #282a36;
-  width: 100vw;
-  /* Garante que o header ocupe toda a largura */
-  overflow-x: hidden;
-  /* Evita rolagem lateral */
+/* --- Estilo de Cabeçalho Minimalista --- */
+.site-header-minimal {
+  background: var(--bg-secondary);
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 
-  .container {
-    padding: 3px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    /* Largura máxima opcional */
-    width: 100%;
-    /* Ocupa 100% da largura disponível */
-    margin: 0 auto;
-    /* Centraliza o conteúdo */
+  @media (max-width: 768px) {
+    padding: 15px 0;
   }
+}
 
-  h1 {
-    font-size: 1.8rem;
+.header-container-minimal {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    a {
-      color: #50fa7b;
-      text-decoration: none;
-      font-weight: bold;
+  /* REMOVER: flex-direction: column e align-items: flex-start AQUI */
+  /* Isso permite que eles fiquem em linha */
+  @media (max-width: 768px) {
+    padding: 0 15px; /* Reduz padding lateral */
+  }
+}
 
-      &:hover {
-        color: #8be9fd;
-      }
+.site-nav-minimal {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Mantenha para permitir que os links quebrem linha se não couberem todos */
+    justify-content: flex-end; /* Alinha à direita */
+    gap: 25px; /* Espaço entre os links */
+
+    @media (max-width: 768px) {
+      gap: 15px; /* Reduz o espaço entre links em telas médias */
+      justify-content: flex-end; /* Continua alinhado à direita */
+    }
+    @media (max-width: 480px) {
+      gap: 10px; /* Reduz ainda mais o espaço para celulares */
+      justify-content: center; /* Centraliza os links se eles ficarem apertados */
     }
   }
 
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    margin: 0;
-  }
-
-  nav ul li a {
-    color: #F2F2F2;
+  li a {
+    color: var(--text-primary);
     text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
 
     &:hover {
-      color: #ff79c6;
+      color: var(--accent);
+    }
+
+    .fab {
+      font-size: 1.1em;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.9rem; /* Reduz o tamanho da fonte dos links para caberem mais */
+      padding: 5px 8px; /* Pequeno padding para dar "respiro" */
     }
   }
 }
