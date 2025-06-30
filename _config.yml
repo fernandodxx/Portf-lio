@@ -42,7 +42,7 @@ collections:
 
   posts:
     output: true 
-    permalink: /:year/:month/:day/:title/
+    permalink: /blog/:year/:month/:day/:title/
 
 
 # Excluded items can be processed by explicitly listing the directories or
