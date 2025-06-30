@@ -2,7 +2,7 @@
 layout: post
 title: "UserProfileApp"
 description: "Gerenciando Perfis de Usuários com Ruby on Rails"
-date: 2024-07-26
+date: 2024-07-26 10:00:00 -0300
 comments: false
 ---
 
