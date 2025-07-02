@@ -22,7 +22,7 @@ email: your-email@example.com
 github_username: fernandodxx
 linkedin_username: "fernando-santoss"
 baseurl: "/blog"
-url:     "https://fernandodxx.github.io"
+url: "https://fernandodxx.github.io"
 number_of_posts: 5
 
 #disqus comments
@@ -42,7 +42,6 @@ collections:
 
   posts:
     output: true 
-    permalink: /blog/:year/:month/:day/:title/
 
 
 # Excluded items can be processed by explicitly listing the directories or
